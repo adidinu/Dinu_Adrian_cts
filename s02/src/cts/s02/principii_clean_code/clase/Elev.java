@@ -6,8 +6,15 @@ public class Elev extends Aplicant {
     private int clasa;
     private String tutore;
 
+    private static Integer sumaFinantata;
+
     public int getClasa() {
         return clasa;
+    }
+
+
+    public static void setSumaFinantata(Integer suma) {
+        Elev.sumaFinantata = suma;
     }
 
     public void setClasa(int i) {
@@ -41,10 +48,9 @@ public class Elev extends Aplicant {
         this.tutore = tutore;
     }
 
-    public int finantare() {
-        int s = 30;
-        System.out.println("Angajatul " + getNume() + " " + getPrenume() + " primeste" + s + " Euro/zi in proiect.");
-        return s;
+    @Override
+    public void afisareFinantare() {
+        System.out.println("Angajatul " + getNume() + " " + getPrenume() + " primeste " + Elev.sumaFinantata + " Euro/zi in proiect.");
     }
 
 }

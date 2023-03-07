@@ -1,5 +1,7 @@
 package cts.s02.principii_clean_code.clase;
 
+import java.util.Scanner;
+
 public abstract class Aplicant {
     protected String nume;
     protected String prenume;
@@ -7,6 +9,8 @@ public abstract class Aplicant {
     protected int punctaj;
     protected int nrProiecte;
     protected String[] denumiriProiect;
+
+    protected static Integer pragAcceptat = 80;
 
 
     public String getNume() {
@@ -33,11 +37,9 @@ public abstract class Aplicant {
         this.varsta = varsta;
     }
 
-    public void statut() {
-        if (punctaj > 80)
-            System.out.println("Aplicantul " + nume + " " + prenume + " a fost acceptat.");
-        else
-            System.out.println("Aplicantul " + nume + " " + prenume + " nu a fost acceptat.");
+    public void afisareStatus() {
+        System.out.println("Aplicantul " + this.nume + " " + prenume + " " +
+                (this.punctaj > Aplicant.pragAcceptat ? "" : "nu") + " a fost acceptat");
     }
 
     public int getPunctaj() {
@@ -70,6 +72,12 @@ public abstract class Aplicant {
 
     public void setNrProiecte(int nrProiecte) {
         this.nrProiecte = nrProiecte;
+    }
+
+    public abstract void afisareFinantare();
+
+    public void setDenumiriProiect(String[] denumiri) {
+        this.denumiriProiect = denumiri;
     }
 
 }

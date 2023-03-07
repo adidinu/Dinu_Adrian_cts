@@ -1,7 +1,7 @@
 package cts.s02.principii_clean_code.clase.readere;
 
 import cts.s02.principii_clean_code.clase.Aplicant;
-import cts.s02.principii_clean_code.clase.Elev;
+import cts.s02.principii_clean_code.clase.Student;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,25 +17,20 @@ public class ReaderStudent extends ReaderAplicant {
     @Override
     public List<Aplicant> readAplicanti() throws FileNotFoundException {
         Scanner input2 = new Scanner(new File(this.fileName));
-        input2.useDelimiter(",|\n");
-        List<Aplicant> elevi = new ArrayList<Aplicant>();
+        input2.useDelimiter(",|\r\n");
+        List<Aplicant> studenti = new ArrayList<Aplicant>();
 
         while (input2.hasNext()) {
-            String nume = input2.next();
-            String prenume = input2.next();
-            int varsta = input2.nextInt();
-            int punctaj = input2.nextInt();
-            int nr = input2.nextInt();
-            String[] vect = new String[5];
-            for (int i = 0; i < nr; i++)
-                vect[i] = input2.next();
-            int clasa = input2.nextInt();
-            String tutore = input2.next();
-            Elev e = new Elev(nume, prenume, varsta, punctaj, nr, vect, clasa, tutore);
-            elevi.add(e);
+            Student stud = new Student();
+            citesteAplicant(input2, stud);
+            int anStudii = input2.nextInt();
+            String facultate = input2.next();
+            stud.setFacultate(facultate);
+            stud.setAn_studii(anStudii);
+            studenti.add(stud);
         }
 
         input2.close();
-        return elevi;
+        return studenti;
     }
 }

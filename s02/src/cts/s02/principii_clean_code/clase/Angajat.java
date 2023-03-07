@@ -4,7 +4,9 @@ import java.util.Arrays;
 
 public class Angajat extends Aplicant {
     private String ocupatie;
-    private int salariu;
+
+    private static Integer sumaFinantata;
+    private Integer salariu;
 
     public String getOcupatie() {
         return ocupatie;
@@ -14,12 +16,16 @@ public class Angajat extends Aplicant {
         this.ocupatie = ocupatie;
     }
 
-    public int getSalariu() {
+    public Integer getSalariu() {
         return salariu;
     }
 
-    public void setSalariu(int salariu) {
+    public void setSalariu(Integer salariu) {
         this.salariu = salariu;
+    }
+
+    public static void setSumaFinantata(Integer suma) {
+        Angajat.sumaFinantata = suma;
     }
 
     public Angajat(String nume, String prenume, int varsta, int punctaj, int nrProiecte, String[] denumire_Proiecte, int salariu, String ocupatie) {
@@ -30,7 +36,6 @@ public class Angajat extends Aplicant {
 
     public Angajat() {
         super();
-
     }
 
 
@@ -38,15 +43,13 @@ public class Angajat extends Aplicant {
     public String toString() {
         return "Angajat: Nume=" + nume + ", Prenume=" + prenume
                 + ", Varsta=" + varsta + ", Punctaj=" + punctaj + ", nrProiecte=" + nrProiecte + ", denumiriProiect="
-                + Arrays.toString(denumiriProiect) + "Ocupatie=" + ocupatie + ", salariu=" + salariu;
+                + Arrays.toString(denumiriProiect) + " Ocupatie=" + ocupatie + ", salariu=" + salariu;
     }
 
-
-    public int finantare() {
-        int s = 10;
+    @Override
+    public void afisareFinantare() {
         // TODO Auto-generated method stub
-        System.out.println("Angajatul " + getNume() + " " + getPrenume() + " primeste" + s + " Euro/zi in proiect.");
-        return s;
+        System.out.println("Angajatul " + super.getNume() + " " + super.getPrenume() + " primeste " + Angajat.sumaFinantata + " Euro/zi in proiect.");
     }
 
 }
