@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Reteta implements Prototype {
-    public String nume;
+    private String nume;
     private Float gramajMedicament;
     private Map<String, Float> solutii;
 
