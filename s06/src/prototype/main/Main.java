@@ -1,5 +1,6 @@
 package prototype.main;
 
+import prototype.clase.Prototype;
 import prototype.clase.Reteta;
 
 import java.util.HashMap;
@@ -14,5 +15,12 @@ public class Main {
         Reteta reteta = new Reteta("Reteta 1", 24f, solutii);
 
         System.out.println(reteta);
+
+        Reteta r2 = (Reteta) reteta.clonare();
+
+        Prototype r3 = reteta.clonare();
+
+        System.out.println(r2);
+        System.out.println(r3);
     }
 }
