@@ -39,6 +39,8 @@ public class Bancomat {
             } else {
                 System.out.println("Nu sunt suficienti bani in cont.");
             }
+        } else {
+            System.out.println("PIN-ul nu a fost introdus.");
         }
     }
 
