@@ -1,12 +1,12 @@
 package decorator.clase;
 
 public class Bilet implements IBilet {
-    public String numeComparator;
+    public String numeCumparator;
     public String numeEchipa1;
     public String numeEchipa2;
 
-    public Bilet(String numeComparator, String numeEchipa1, String numeEchipa2) {
-        this.numeComparator = numeComparator;
+    public Bilet(String numeCumparator, String numeEchipa1, String numeEchipa2) {
+        this.numeCumparator = numeCumparator;
         this.numeEchipa1 = numeEchipa1;
         this.numeEchipa2 = numeEchipa2;
     }
@@ -19,7 +19,7 @@ public class Bilet implements IBilet {
     @Override
     public String toString() {
         return "Bilet{" +
-                "numeComparator='" + numeComparator + '\'' +
+                "numeCumparator='" + numeCumparator + '\'' +
                 ", numeEchipa1='" + numeEchipa1 + '\'' +
                 ", numeEchipa2='" + numeEchipa2 + '\'' +
                 '}';

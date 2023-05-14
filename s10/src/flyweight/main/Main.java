@@ -11,8 +11,8 @@ public class Main {
         PozitieDesenare pozitie3 = new PozitieDesenare(11, 55, "albastru");
         fabrica.getSpectator(1, 1.75, 50).deseneazaSpectator(pozitie3);
         fabrica.getSpectator(2, 1.8, 60).deseneazaSpectator(pozitie1);
-        fabrica.getSpectator(1, 1.75, 50).deseneazaSpectator(pozitie2);
+        fabrica.getSpectator(1, 1.75, 25).deseneazaSpectator(pozitie2);
 
-        
+
     }
 }

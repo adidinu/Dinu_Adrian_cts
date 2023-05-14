@@ -1,5 +1,5 @@
 package flyweight.clase;
 
 public interface ISpectator {
-    public void deseneazaSpectator(PozitieDesenare pozitie);
+    void deseneazaSpectator(PozitieDesenare pozitie);
 }
