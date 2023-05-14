@@ -27,11 +27,5 @@ public class Main {
         flota.adaugaGrup(grupAutobuzeMijlocii);
         flota.adaugaGrup(grupAutobuzeMici);
         flota.afisareSumaAsigurare();
-
-        Element autobuzVip = new Autobuz("Dita", 300000, 4000);
-
-        flota.adaugaGrup(autobuzVip);
-        flota.afisareSumaAsigurare();
     }
-
 }

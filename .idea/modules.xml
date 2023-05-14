@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/extra/extra.iml" filepath="$PROJECT_DIR$/extra/extra.iml" />
       <module fileurl="file://$PROJECT_DIR$/repo.iml" filepath="$PROJECT_DIR$/repo.iml" />
       <module fileurl="file://$PROJECT_DIR$/s02/s02.iml" filepath="$PROJECT_DIR$/s02/s02.iml" />
       <module fileurl="file://$PROJECT_DIR$/s02_/s02_.iml" filepath="$PROJECT_DIR$/s02_/s02_.iml" />
