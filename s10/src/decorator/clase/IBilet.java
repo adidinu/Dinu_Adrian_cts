@@ -1,7 +1,7 @@
 package decorator.clase;
 
 public interface IBilet {
-    public void printareBilet();
+    void printareBilet();
 
-    public String getNumeEchipa1();
+    String getNumeEchipa1();
 }
